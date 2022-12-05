@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>IT Academy</title>
+    <link rel="stylesheet" href="/css/styleFormation.css"/>
+</head>
+<body>
+    <h1>IT Academy</h1>
+    <h2>Formations disponibles</h2>
+    <form action="/formations/basket">
+        <button class="button">Voir le panier</button>
+    </form>
+
+    <form action="/connection">
+        <button class="button">Se connecter</button>
+    </form>
+
+    <table class="tab">
+        <tbody>
+            <tr>
+                <td class="case">Id</td>
+                <td class="case">Nom</td>
+                <td class="case">Prix</td>
+                <td class="case">Début</td>
+                <td class="case">Fin</td>
+            </tr>
+            <% for (index=0 ; index<formations.length ; index++){%>
+            <tr>
+                <td class="case"><%=formations[index].id%></td>
+                <td class="case"><%=formations[index].name%></td>
+                <td class="case"><%=formations[index].price%></td>
+                <td class="case"><%=formations[index].start%></td>
+                <td class="case"><%=formations[index].end%></td>
+                <td><a href="/formation/add/<%=index%>" class="button">S'inscrire</a></td>
+            </tr>
+            <%}%>
+        </tbody>
+    </table>
+</body>
+</html>

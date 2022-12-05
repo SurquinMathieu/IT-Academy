@@ -1,0 +1,31 @@
+.button {
+	background-color: rgb(164, 164, 164);
+	color: rgb(27, 117, 27);
+	border-radius: 5px;
+    font-weight: bold;
+    border-color: rgb(164, 164, 164);
+ }
+
+form {
+    display: inline-block; 
+}
+
+.case {
+    border : 1px solid; 
+    border-radius: 2px;
+    border-color:rgb(182, 182, 182)
+}
+
+body{
+    text-align: center;
+}
+
+.tab {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1,h2 {
+    color: midnightblue;
+}
