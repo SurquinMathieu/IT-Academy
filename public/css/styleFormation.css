@@ -1,3 +1,21 @@
+.itAcademy{
+    text-align: center;
+}
+
+.availableFormations{ 
+    text-align: left;
+}
+
+.redirectButtons {
+    text-align: left;
+    padding-left: 20px;
+
+}
+
+.formations{
+    text-align: center;
+}
+
 .button {
 	background-color: rgb(164, 164, 164);
 	color: rgb(27, 117, 27);
@@ -10,22 +28,22 @@ form {
     display: inline-block; 
 }
 
-.case {
+.box {
     border : 1px solid; 
     border-radius: 2px;
     border-color:rgb(182, 182, 182)
 }
 
-body{
-    text-align: center;
-}
-
 .tab {
     text-align: center;
-    margin-left: auto;
+    margin-left: 20px;
     margin-right: auto;
 }
 
 h1,h2 {
     color: midnightblue;
+}
+
+h2{
+    padding-left: 20px;
 }

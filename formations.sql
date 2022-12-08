@@ -36,7 +36,7 @@ CREATE TABLE `commandes` (
 
 LOCK TABLES `commandes` WRITE;
 /*!40000 ALTER TABLE `commandes` DISABLE KEYS */;
-INSERT INTO `commandes` VALUES (1,'Mathieu','1'),(2,'Mathieu','1,2');
+INSERT INTO `commandes` VALUES (1,'Mathieu','1'),(2,'Romain','1,2');
 /*!40000 ALTER TABLE `commandes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,7 +54,7 @@ CREATE TABLE `formation` (
   `Debut` date DEFAULT NULL,
   `Fin` date DEFAULT NULL,
   PRIMARY KEY (`idformation`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +63,7 @@ CREATE TABLE `formation` (
 
 LOCK TABLES `formation` WRITE;
 /*!40000 ALTER TABLE `formation` DISABLE KEYS */;
-INSERT INTO `formation` VALUES (1,'Python',150,'2023-01-01','2023-01-02'),(2,'HTML CSS',200,'2023-03-10','2023-03-11');
+INSERT INTO `formation` VALUES (1,'Python',150,'2023-01-01','2023-01-02'),(2,'HTML CSS',200,'2023-03-10','2023-03-11'),(3,'Javascript',180,'2023-07-02','2023-07-03');
 /*!40000 ALTER TABLE `formation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -76,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-05 14:00:50
+-- Dump completed on 2022-12-08 20:56:18

@@ -10,7 +10,8 @@ var connection = mysql.createConnection({
 
 let formationsList = [];
 let basket = [];
-connection.query('SELECT * FROM formation', function(error, result) {
+
+connection.query('SELECT *, DATE_FORMAT(Debut, "%Y") FROM formation', function(error, result) {
     if (error) console(error);
     result.forEach(element => {
         let formation = new Formation(element.idformation, element.Nom,element.Prix,element.Debut,element.Fin); //noms des colonnes de la base
@@ -19,11 +20,11 @@ connection.query('SELECT * FROM formation', function(error, result) {
 
 });
 
-exports.redirectToFormationList = function(request, response){
+exports.redirectToFormationList = function(request, response){  //redirection depuis la racine
     response.redirect('/formations')
 }
 
-exports.formationsList = function(request, response){
+exports.formationsList = function(request, response){   
     response.render('formationsList.ejs',{formations: formationsList})
 }
 
@@ -49,7 +50,7 @@ exports.deleteFromBasket = function(request,response){
     response.render('basket.ejs',{basket:basket})
 }
 
-exports.finalizeFormations = function (request, response) {
+exports.finalizeFormations = function (request, response) { //finalisation de l'inscription aux formations
 	if (request.session.user == undefined) {
         console.log(request.session)
 		response.render('connection.ejs');
@@ -70,9 +71,8 @@ exports.finalizeFormations = function (request, response) {
     }
 }
 
-exports.formationsConnected = function (request, response){
+exports.formationsConnected = function (request, response){ //lors de l'enregistrement du pseudo
     let name = request.body.nom;
     request.session.user = name;
-    console.log(request.session.user)
     response.render('formationsList.ejs',{formations : formationsList})
 }
